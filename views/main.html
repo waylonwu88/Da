@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="Operationer" >
+<head>
+    <meta charset="UTF-8">
+    <title>Da</title>
+    <link href=src="../public/Scripts/angular/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" rel="stylesheet">
+</head>
+<body>
+<div class="sideNavArea" ng-controller="sideBarController">
+    @include('sideNav')
+</div>
+<div class="main">
+    <div class="infoCenterArea">
+        @include('infoCenter')
+    </div>
+    <div class="content">
+        <div class="titleArea"></div>
+        <div class="contentArea container-fluid" ng-view ng-style="contentNgStyle = {'min-height': '500px'}">
+        </div>
+    </div>
+</div>
+<script src="../public/Scripts/angular/angular.min_1.3.15.js"></script>
+<script src="../public/Scripts/angular/angular-route.min_1.3.15.js"></script>
+<script src="../public/Scripts/angular/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
+</body>
+</html>
